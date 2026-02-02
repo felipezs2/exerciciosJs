@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DOM</title>
+</head>
+<body>
+
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div>
+
+    <script>
+        var body1 = document.getElementsByTagName('body')[0]
+        var div1 = document.getElementsByTagName ('div') [0]
+
+        /**/
+        body1.style.background = 'black'
+        body1.style.color = 'white'
+        
+        var p1 = document.getElementsByTagName('p')[0]
+        document.write('<br>')
+        document.write(p1.innerText) 
+        document.write('<br>')
+        document.write(p1) 
+        document.write('<br>')
+        window.document.write(window.document.URL)
+    
+    </script>
+
+</body>
+</html>

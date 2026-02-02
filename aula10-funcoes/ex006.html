@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            background: #f2f2f2;
+            color: black;
+            font-weight: bold;
+            margin: 20px;
+            height: 200px;
+            width: 200px;            
+            line-height: 150px;
+            text-align: center;
+            align-content: center;
+            font-family: Arial, Helvetica, sans-serif;              
+        }
+
+        div.passar{
+            background: rgb(127, 47, 255);
+            color: white;
+            font-weight: bold;
+            margin: 20px;
+            height: 200px;
+            width: 200px;            
+            line-height: 150px;
+            text-align: center;
+            align-content: center;
+            font-family: Arial, Helvetica, sans-serif;              
+        }
+
+        div#inout{
+            background: rgb(255, 47, 47);
+            color: white;
+            font-weight: bold;
+            margin: 20px;
+            height: 200px;
+            width: 200px;            
+            line-height: 150px;
+            text-align: center;
+            align-content: center;
+            font-family: Arial, Helvetica, sans-serif;              
+        }
+
+        div.teste{
+            background: rgb(255, 47, 47);
+            color: white;
+            font-weight: bold;
+            margin: 20px;
+            height: 200px;
+            width: 200px;            
+            line-height: 150px;
+            text-align: center;
+            align-content: center;
+            font-family: Arial, Helvetica, sans-serif;              
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()">
+        interaja...
+    </div>
+
+    <div class="passar" onmousemove="passar()">
+        Não passou
+    </div>
+    
+    <div id="inout" onmouseenter="inn()" onmouseout="out()">
+        Fora
+    </div>
+
+    <script>
+        function clicar() {
+            var clicou = document.getElementById('area')
+            clicou.innerText = 'Clicou'
+            clicou.style.background = 'greenyellow'
+        }
+        
+        function passar() {
+            var passou = document.querySelector('.passar') 
+            passou.innerText = 'Passou'
+        }
+    
+        var catchmouse = document.querySelector('#inout') 
+        function inn() {
+            catchmouse.innerText = 'Dentro'
+            catchmouse.style.background = 'greenyellow'
+            catchmouse.style.color = 'black'
+        }
+        function out() {
+            catchmouse.innerText = 'Fora'
+            catchmouse.style.background = 'red'
+            catchmouse.style.color = 'white'
+        }
+
+
+    </script>
+
+</body>
+</html>

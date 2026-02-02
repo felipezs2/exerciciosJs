@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo Salarial</title>
+</head>
+<body>
+    <script>        
+
+        var nome = String(prompt('Bem vindo ao Recibo Salarial. Por favor insira nome do funcionário: '))
+        var setor = String(prompt('Insira o setor do funcionário: ').toLowerCase())
+        var cargo = String(prompt('Agora insira o cargo do funcionário'))
+        var periodoPag = String(prompt('Informe o período de pagamento: [MENSALISTA] ou [SEMANALISTA]: '))
+        var salario = parseFloat(prompt('Agora insira o salário: '))
+        var periodo = periodoPag.toUpperCase() === 'MENSALISTA' ? 'por mês' : 'por semana'
+        var bonus = nome.length * 10
+        var total = parseInt(salario + bonus)
+        var prevInvestimento =  parseInt(total ** 2)
+
+        document.write(`O funcionário ${nome.toUpperCase()} que ocupa o cargo de ${cargo.toUpperCase()} no setor ${setor} recebe o salário de ${salario.toFixed(2)} por ${periodo.toUpperCase()}`)
+        
+        document.write (`<br>Verificamos e o nome do funcionário possui ${nome.length} letras, logo seu bônus será de R$${bonus}, totalizando R$${total}`)
+
+        var body1 = document.getElementsByTagName('body')[0] 
+
+        body1.style.backgroundColor = 'black'
+        body1.style.color = 'white'
+
+        var dividirSocios = confirm ('Deseja dividir o total entre sócios?')
+        var mensagemFinal 
+            if  (dividirSocios === true) {
+                var qtdSocios = parseInt(prompt('Quantos sócios?'))
+                var valorIndividual = total / qtdSocios
+                var troco = total % qtdSocios
+                alert(`No total de ${qtdSocios} cada um vai receber um total de ${valorIndividual}, sobrando ${troco} de troco.`)
+             }
+            else {
+                alert(`Divisão não realizada. Previsão dos investimentos futuros: ${prevInvestimento}`)
+            }
+    
+        </script>
+</body>
+</html>

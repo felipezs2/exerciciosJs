@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../aula06/style.css">
+    <title>Cadastro de Funcionários</title>
+</head>
+<body>
+    <script>
+        alert ('Olá, seja bem vindo!')
+        confirm ('Gostaria de dar inicio ao cadastro?')
+        var nome = String(prompt ('Insira o nome do funcionário: '))
+        var idade = parseInt(prompt('Insira a idade do funcionário: '))
+        var peso = parseFloat(prompt('Insira o peso do funcionário: '))
+        var nota = Number(prompt('Insira a nota do funcionário: '))
+        document.write (`Relatório de registro: </br>Nome: ${nome}</br>Idade: ${idade}</br>Peso:${peso}</br>Nota: ${nota}</br>`)
+        document.write (`Quantidade de letras no nome do funcionário: ${nome.length}</br>`)
+        document.write (`Nome do funcionário em letras maiúsculas: ${nome.toUpperCase()}</br>`)
+        document.write (`Nome do funcionário em letras minúsculas: ${nome.toLowerCase()}</br>`)
+        document.write (`Nota do funcionário com casas decimais: ${nota.toFixed(4)}</br>`)
+        document.write (`Nota do funcionário arredondada: ${nota.toFixed()}</br>`)
+
+
+        
+
+   </script>
+</body>
+</html>

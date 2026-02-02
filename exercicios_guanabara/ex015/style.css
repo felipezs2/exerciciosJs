@@ -1,0 +1,31 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(213, 168, 255);
+}
+
+main {
+    background: whitesmoke;
+    width: 500px;
+    height: 480px;
+    padding-top: 20px;
+    padding-left: 20px;
+    border-radius: 20px;
+
+}
+
+h1 {
+    color: white;
+}
+
+label, input , p {
+    background: transparent;
+    margin: 10px;
+}
+
+#imagem {
+    background: black;
+    height: 300px;
+    width: 300px;
+    justify-self: center;
+    border-radius: 200px;
+}

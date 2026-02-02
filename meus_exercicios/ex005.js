@@ -1,0 +1,5 @@
+var horarioAtual = new Date()
+var hora = horarioAtual.getHours ()
+var minutos = horarioAtual.getMinutes()
+var segundos = horarioAtual.getSeconds()
+console.log (`${hora}:${minutos}:${segundos}`)
