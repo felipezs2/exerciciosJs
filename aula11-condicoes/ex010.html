@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Multas</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <label for="input">Insira a velocidade do condutor</label><br>
+    <input type="number" id="velocidade" name="velocidade">
+    <input type="button" value="Enviar" onclick="multa()">
+    <p id="retorno"></p>
+
+    <script>
+        var limiteVelocidade = 60
+        function multa() {
+            var pegaVelocidade = document.querySelector('input#velocidade')
+            var velocidade = Number(pegaVelocidade.value)
+            
+            var ret = document.querySelector('p#retorno')
+            
+            if (velocidade <= 60) {
+            ret.innerHTML = `Você está dentro limite de velovidade permitido (${limiteVelocidade} Km/h). Tenha uma boa viagem.`
+            } else {
+                ret.innerHTML = `Você ultrapassou o limite de velocidade permitido (${limiteVelocidade} Km/h). Você foi multado`
+            }
+        }
+    </script>
+</body>
+</html>

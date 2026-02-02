@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            color: rgba(138, 138, 138, 0.733);
+            width: 200px;
+            height: 25px;
+            margin-top: 5px;
+        }
+
+    </style>
+    <title>Radar</title>
+</head>
+<body>
+    <h1>Radar de velocidade</h1>
+    <label> Insira a velocidade do condutor</label><br>
+    <input  type="number" name="velocidade" id="velocidade"><br>
+    <input type="button" value="Enviar" onclick="enviar()">
+    <p id="res"></p>
+    <script>
+        var limiteVelocidade = 60
+        function enviar (){
+            var pegavelocidade = document.querySelector("input#velocidade")
+            var velocidade = Number(pegavelocidade.value)
+
+            var res = document.querySelector('p#res')
+
+            if (velocidade <= 60) {
+                res.innerHTML = `Boa viagem`
+            }
+            else if (velocidade <=80){
+                res.innerHTML = `Você ultrapassou o limite de velocidade de ${limiteVelocidade} Km/h, você estava dirigindo a ${velocidade} Km/h, logo levou uma multa leve`
+            }
+            else {
+            res.innerHTML = `Você ultrapassou o limite de velocidade de ${limiteVelocidade} Km/h, você estava dirigindo a ${velocidade} Km/h, logo levou uma multa grave`    
+            }
+        }
+
+    </script>
+
+</body>
+</html>
