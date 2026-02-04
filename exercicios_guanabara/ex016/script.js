@@ -16,16 +16,18 @@ function enviar(){
         window.alert ('Por favor insira um valor final')
     } else if (pegaPasso.value.length == 0) {
         window.alert ('Por favor insira um valor no passo')
+    } else {
+        //Deixar o retorno 'Limpo' fora do loop
+        pegaRetorno.innerHTML = 'Contando: '
+        if (inicio < fim){
+            for (inicio; inicio <= fim; inicio += passo ){
+                pegaRetorno.innerHTML += `${inicio} `
+            }
+        } else if (inicio > fim) {
+            for (fim; inicio >= fim; fim+= passo)
+                pegaRetorno.innerHTML += `${fim}`
+        }
+            
     }
-        
-    for (inicio; inicio <= fim; inicio += passo) {
-        pegaRetorno.innerHTML = `${inicio}`    
-    }
-    
-    while (inicio<=fim) {
-        pegaRetorno.appendChild(inicio+=passo)
-
-    }
-
 
 }
