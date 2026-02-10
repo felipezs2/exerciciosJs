@@ -12,6 +12,17 @@ section, div, label, input, p {
 
 body {
     justify-items: center;
+    width: 90%;
+}
+
+header p{
+    background: transparent;
+    margin-top: 0px;
+    color: #bbbbbb79;
+}
+
+header h1 {
+    margin-bottom: 5px;
 }
 
 section {
@@ -19,6 +30,7 @@ section {
     width: 550px;
     border-radius: 10px;
     justify-items: center;
+    display: grid;
 }
 
 div {
@@ -30,5 +42,8 @@ div {
 }
 
 #button {
-    justify-self: auto;
+    display: inline-block;
+    justify-self: end;
+    margin-right: 130px;
+    border-radius: 5px;
 }

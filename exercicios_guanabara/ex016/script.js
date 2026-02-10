@@ -26,10 +26,12 @@ function enviar(){
             for (inicio; inicio <= fim; inicio += passo ){
                 pegaRetorno.innerHTML += ` ${inicio} \u{27A1}`
             } pegaRetorno.innerHTML += `\u{1F3C1}`
-        } else {
-            for (inicio; inicio >= fim; inicio -= passo)
+        } else if (inicio > fim) {
+            for (inicio; inicio >= fim; inicio -= passo) {
                 pegaRetorno.innerHTML += ` ${inicio} \u{27A1}`
         } pegaRetorno.innerHTML += `\u{1F3C1}`
+
+    }
             
     }
 
