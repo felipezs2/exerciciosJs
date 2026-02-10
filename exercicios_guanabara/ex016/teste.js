@@ -1,9 +1,15 @@
-var inicio = 1
-var fim = 10
-var passo = 2
+var inicio = 10
+var fim = 1
+var passo = 1
 
-for (inicio; inicio <= fim; (inicio += passo)) {
-    console.log (`${inicio}`)
+if (inicio < fim) {
+    for (inicio; inicio <= fim; (inicio += passo)) {
+        console.log (`${inicio}`)
+}
+} else {
+    for (inicio; inicio >= fim; (inicio -= passo)) {
+        console.log (`${inicio}`)
+}
 }
 
 /*
