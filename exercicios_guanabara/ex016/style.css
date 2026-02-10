@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    font-family: JetBrains Mono;
+    background-color: #1f1f1f;
+    color: #bbbbbb;
+}
+
+section, div, label, input, p {
+    background-color: #1a1a1a;   
+}
+
+body {
+    justify-items: center;
+}
+
+section {
+    height: 250px;
+    width: 550px;
+    border-radius: 10px;
+    justify-items: center;
+}
+
+div {
+    padding: 12px;
+}
+
+#retorno{
+    padding: 12px;
+}
+
+#button {
+    justify-self: auto;
+}
