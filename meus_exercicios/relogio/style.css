@@ -30,6 +30,7 @@ section {
     width: 550px;
     border-radius: 10px;
     justify-items: center;
+    align-items: center;
     display: grid;
 }
 
@@ -39,6 +40,7 @@ div {
 
 #retorno{
     padding: 12px;
+    font-size: 28px;
 }
 
 #button {
