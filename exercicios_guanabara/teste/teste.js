@@ -25,8 +25,7 @@ function enviarNumero() {
 
 function finalizar(){
     var retorno = document.querySelector('p#retorno')
-    var pegaNumero = document.querySelector('input#numero')
+        var pegaNumero = document.querySelector('input#numero')
     var numero = Number(pegaNumero.value)
-
-    retorno.innerHTML = `${numero}`
+    retorno.innerHTML = `${numero} e ${lista}`
 }
